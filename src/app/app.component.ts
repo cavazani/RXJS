@@ -29,4 +29,19 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'RXJS';
+
+  //promises
+
+  minhaPromise(nome: string) : Promise<string>{
+    return new Promise((resolve, reject) => {
+      if(nome === 'Eduardo'){
+        setTimeout(() =>{
+          resolve('Seja bem vindo' + nome);
+        }, 1000);
+      }
+      else{
+        reject('Ops! voce nao é o Gabriel');
+      }
+    });
+  }
 }
