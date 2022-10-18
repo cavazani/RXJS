@@ -29,10 +29,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit{
 
-  ngOnInit(): void {
-    throw new Error('Method not implemented.');
-  }
-  
+
+
   title = 'RXJS';
 
   //promises
@@ -47,6 +45,11 @@ export class AppComponent implements OnInit{
       else{
         reject('Ops! voce nao é o Gabriel');
       }
-    });
+    });  
+  }
+
+  ngOnInit(): void {
+    this.minhaPromise('Gabriel')
+    .then(result => console.log(result));
   }
 }
