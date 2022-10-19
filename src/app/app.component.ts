@@ -50,6 +50,7 @@ export class AppComponent implements OnInit{
 
   ngOnInit(): void {
     this.minhaPromise('Gabriel')
-    .then(result => console.log(result));
+    .then(result => console.log(result))
+    .catch(erro => console.log(erro));
   }
 }
