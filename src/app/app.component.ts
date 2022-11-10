@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -46,6 +47,13 @@ export class AppComponent implements OnInit{
         reject('Ops! voce nao é o Gabriel');
       }
     });  
+  }
+
+
+  minhaObservable(nome: string) : Observable<string>{
+    return new Observable(subscriber => {
+        subscriber.next('Ola!');
+    })
   }
 
   ngOnInit(): void {
